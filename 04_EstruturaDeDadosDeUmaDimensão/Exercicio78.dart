@@ -35,3 +35,26 @@
 // EXIBIR "Vetor 2:", vetor2
 // EXIBIR "Vetor pares:", pares
 // EXIBIR "Vetor ímpares:", impares
+
+
+void main() {
+  List<int> matriz1 = [1, 2, 3, 4, 5, 6];
+  List<int> matriz2 = [7, 8, 9, 10, 11, 12];
+  List<int> pares = [];
+  List<int> impares = [];
+
+  for (int i = 0; i < 6; i++) {
+    if (i % 2 == 0) {
+      pares.add(matriz1[i]);
+      pares.add(matriz2[i]);
+    } else {
+      impares.add(matriz1[i]);
+      impares.add(matriz2[i]);
+    }
+  }
+
+  print("Matriz 1: $matriz1");
+  print("Matriz 2: $matriz2");
+  print("Elementos de índices pares: $pares");
+  print("Elementos de índices ímpares: $impares");
+}

@@ -27,3 +27,18 @@
 //     ADICIONAR quadrado À matriz2
 // EXIBIR "Matriz original:", matriz1
 // EXIBIR "Matriz dos quadrados:", matriz2
+
+void main() {
+  List<int> matriz1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+  List<int> matriz2 = [];
+
+  
+  for (int elemento in matriz1) {
+    int quadrado = elemento * elemento;
+    matriz2.add(quadrado);
+  }
+
+  
+  print("Matriz original: $matriz1");
+  print("Matriz dos quadrados: $matriz2");
+}

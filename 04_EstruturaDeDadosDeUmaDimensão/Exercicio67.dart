@@ -29,3 +29,25 @@
 //     ADICIONAR vetorNomes1[i] À vetorNomes3
 // PARA i DE 0 ATÉ 29 FAÇA
 //     ADIC
+
+void main() {
+  // Entrada de dados
+  List<String> vetorNomes1 = [
+    "Ana", "Pedro", "Maria", "João", "Luana", "Carlos", "Julia", "Marcos", "Laura", "Lucas",
+    "Mariana", "Rafael", "Fernanda", "Diego", "Carolina", "Rodrigo", "Gabriela", "Matheus", "Isabela", "Gustavo"
+  ];
+  List<String> vetorNomes2 = [
+    "Sophia", "Leonardo", "Larissa", "Bruno", "Bianca", "Gabriel", "Camila", "Felipe", "Amanda", "Henrique",
+    "Natália", "Daniel", "Jéssica", "Rafaela", "Eduardo", "Thaís", "Vinícius", "Tatiane", "Guilherme", "Carla",
+    "Renata", "Anderson", "Beatriz", "Ricardo", "Nathalia", "Thiago", "Letícia", "Rafael", "Vitória", "Luiz"
+  ];
+
+  List<String> vetorNomes3 = [];
+  
+  vetorNomes3.addAll(vetorNomes1);
+  vetorNomes3.addAll(vetorNomes2);
+  
+  print("Vetor de Nomes 1: $vetorNomes1");
+  print("Vetor de Nomes 2: $vetorNomes2");
+  print("Vetor de Nomes 3: $vetorNomes3");
+}

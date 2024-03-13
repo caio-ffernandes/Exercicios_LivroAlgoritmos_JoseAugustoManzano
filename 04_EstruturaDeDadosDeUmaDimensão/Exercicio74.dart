@@ -33,3 +33,26 @@
 // EXIBIR "Menor temperatura:", menorTemperatura
 // EXIBIR "Maior temperatura:", maiorTemperatura
 // EXIBIR "Média das temperaturas:", mediaTemperaturas
+
+void main() {
+  List<double> vetorTemperaturas = [
+    20.0, 21.5, 22.3, 23.8, 24.7, 25.9, 26.5, 27.2, 28.6, 29.3,
+    30.2, 31.8, 32.5, 33.9, 34.6, 35.7, 36.4, 37.2, 38.1, 39.5
+  ]; 
+  double menorTemperatura = double.infinity;
+  double maiorTemperatura = -double.infinity;
+  double somaTemperaturas = 0;
+  for (int i = 0; i < vetorTemperaturas.length; i++) {
+    if (vetorTemperaturas[i] < menorTemperatura) {
+      menorTemperatura = vetorTemperaturas[i];
+    }
+    if (vetorTemperaturas[i] > maiorTemperatura) {
+      maiorTemperatura = vetorTemperaturas[i];
+    }
+    somaTemperaturas += vetorTemperaturas[i];
+  }
+  double mediaTemperaturas = somaTemperaturas / vetorTemperaturas.length;
+  print("Menor temperatura: $menorTemperatura");
+  print("Maior temperatura: $maiorTemperatura");
+  print("Média das temperaturas: $mediaTemperaturas");
+}

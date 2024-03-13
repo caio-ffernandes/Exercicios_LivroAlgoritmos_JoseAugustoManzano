@@ -27,3 +27,20 @@
 //     ADICIONAR fahrenheit À vetorFahrenheit
 // EXIBIR "Vetor de temperaturas em Celsius:", vetorCelsius
 // EXIBIR "Vetor de temperaturas em Fahrenheit:", vetorFahrenheit
+
+void main() {
+  List<double> vetorCelsius = [
+    20.0, 21.5, 22.3, 23.8, 24.7, 25.9, 26.5, 27.2, 28.6, 29.3,
+    30.2, 31.8, 32.5, 33.9, 34.6, 35.7, 36.4, 37.2, 38.1, 39.5,
+    20.0, 21.5, 22.3, 23.8, 24.7
+  ];
+  List<double> vetorFahrenheit = [];
+  
+  for (int i = 0; i < vetorCelsius.length; i++) {
+    double fahrenheit = (vetorCelsius[i] * 9 / 5) + 32;
+    vetorFahrenheit.add(fahrenheit);
+  }
+  
+  print("Vetor de temperaturas em Celsius: $vetorCelsius");
+  print("Vetor de temperaturas em Fahrenheit: $vetorFahrenheit");
+}

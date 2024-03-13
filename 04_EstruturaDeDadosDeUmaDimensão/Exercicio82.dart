@@ -27,3 +27,25 @@
 //         ímpares = ímpares + 1
 // EXIBIR "Quantidade de números pares:", pares
 // EXIBIR "Quantidade de números ímpares:", ímpares
+
+
+void main() {
+  List<int> vetor = [
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+    11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+    21, 22, 23, 24, 25, 26, 27, 28, 29, 30
+  ];
+  int pares = 0;
+  int impares = 0;
+
+  for (int elemento in vetor) {
+    if (elemento % 2 == 0) {
+      pares++;
+    } else {
+      impares++;
+    }
+  }
+
+  print("Quantidade de números pares: $pares");
+  print("Quantidade de números ímpares: $impares");
+}

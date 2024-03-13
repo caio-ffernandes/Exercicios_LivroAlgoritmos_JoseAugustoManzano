@@ -83,3 +83,49 @@
 // - Nome: Bob, Espécie: Cachorro, Idade: 3 anos, Serviços: ...
 // - Nome: Luna, Espécie: Coelho, Idade: 1 ano, Serviços: ...
 // ...
+
+
+class Servico {
+  String nome;
+  double valor;
+  String data;
+
+  Servico(this.nome, this.valor, this.data);
+
+  @override
+  String toString() {
+    return '- $nome (R\$ ${valor.toStringAsFixed(2)}) - $data';
+  }
+}
+
+class Pet {
+  String nome;
+  String especie;
+  int idade;
+  List<Servico> servicos = [];
+
+  Pet(this.nome, this.especie, this.idade);
+
+  void adicionarServico(Servico servico) {
+    servicos.add(servico);
+  }
+
+  @override
+  String toString() {
+    String info = 'Pet: $nome\nEspécie: $especie\nIdade: $idade anos\nServiços:';
+    for (var servico in servicos) {
+      info += '\n$servico';
+    }
+    return info;
+  }
+}
+
+void main() {
+  List<Pet> pets = [
+    Pet('Bob', 'Cachorro', 3),
+    Pet('Mia', 'Gato', 6),
+    Pet('Max', 'Papagaio', 8),
+  ];
+
+  pets[0].adicionarServico(Servico('Banho e Tosa', 50.00, '2024-03-01'));
+  pets[0].adicionarServico(Servico('Consulta Veterinária', 80

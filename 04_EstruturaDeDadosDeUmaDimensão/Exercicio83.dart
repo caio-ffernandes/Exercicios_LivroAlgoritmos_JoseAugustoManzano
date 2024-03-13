@@ -24,3 +24,20 @@
 //     quadrado = soma^2
 //     ADICIONAR quadrado À vetor_resultante
 // EXIBIR "Vetor resultante:", vetor_resultante
+
+
+void main() {
+  List<int> vetor1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  List<int> vetor2 = [11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+  List<int> vetorResultante = [];
+
+  
+  for (int i = 0; i < 10; i++) {
+    int soma = vetor1[i] + vetor2[i];
+    int quadrado = soma * soma;
+    vetorResultante.add(quadrado);
+  }
+
+
+  print("Vetor resultante: $vetorResultante");
+}

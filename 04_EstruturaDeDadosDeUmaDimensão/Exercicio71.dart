@@ -26,3 +26,14 @@
 //     ADICIONAR -vetorOriginal[i] À vetorNegativo
 // EXIBIR "Vetor original:", vetorOriginal
 // EXIBIR "Vetor com valores negativos:", vetorNegativo
+
+void main() {
+  List<int> vetorOriginal = [5, 3, 7, 2, 4, 6, 1, 8, 9, 10];
+  List<int> vetorNegativo = [];
+  for (int i = 0; i < 10; i++) {
+    vetorNegativo.add(-vetorOriginal[i]);
+  }
+  
+  print("Vetor original: $vetorOriginal");
+  print("Vetor com valores negativos: $vetorNegativo");
+}

@@ -28,3 +28,16 @@
 //     elemento = matriz1[i] - matriz2[i]
 //     ADICIONAR elemento À matriz3
 // EXIBIR matriz3
+
+void main() {
+  List<int> matriz1 = [2, 3, 4, 7, 8, 10, 12, 15, 17, 20, 22, 25, 27, 30, 32, 35, 37, 40, 42, 45];
+  List<int> matriz2 = [1, 2, 3, 5, 7, 9, 11, 14, 16, 19, 21, 24, 26, 29, 31, 34, 36, 39, 41, 44];
+  List<int> matriz3 = [];
+
+  for (int i = 0; i < 20; i++) {
+    int elemento = matriz1[i] - matriz2[i];
+    matriz3.add(elemento);
+  }
+
+  print("Matriz resultante: $matriz3");
+}

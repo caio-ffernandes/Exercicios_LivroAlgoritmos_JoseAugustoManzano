@@ -24,3 +24,37 @@
 //     ADICIONAR nome À nomes
 //     contador = contador + 1
 // EXIBIR "Nomes lidos: " + juntar(nomes, ", ")
+import 'dart:io';
+
+
+
+void main() {
+  var i = 0;
+
+
+
+
+  List<String> nomes = [
+    'Ana',
+    'Carlos',
+    'Maria',
+    'João',
+    'Juliana',
+    'Pedro',
+    'Luisa',
+    'Fernando',
+    'Camila',
+    'Rafael'
+  ];
+
+
+
+
+
+  for (i; i <= 10; i++) {
+     
+     print(i);
+     print(nomes[i]);
+  }
+
+}

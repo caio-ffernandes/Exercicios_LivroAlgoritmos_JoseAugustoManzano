@@ -29,3 +29,24 @@
 //     ADICIONAR somatorio À vetorSomatorio
 // EXIBIR "Vetor original:", vetorOriginal
 // EXIBIR "Vetor com somatório:", vetorSomatorio
+
+void main() {
+  // Entrada de dados
+  List<int> vetorOriginal = [5, 3, 7, 2, 4, 6, 1, 8, 9, 10, 12, 15, 11, 14, 20, 18, 16, 13, 19, 17];
+  
+  // Inicialização do vetor com somatório
+  List<int> vetorSomatorio = [];
+  
+  // Construção do vetor com somatório
+  for (int i = 0; i < 20; i++) {
+    int somatorio = 0;
+    for (int j = 1; j <= vetorOriginal[i]; j++) {
+      somatorio += j;
+    }
+    vetorSomatorio.add(somatorio);
+  }
+  
+  // Exibição dos vetores
+  print("Vetor original: $vetorOriginal");
+  print("Vetor com somatório: $vetorSomatorio");
+}

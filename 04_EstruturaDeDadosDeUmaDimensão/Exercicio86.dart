@@ -28,3 +28,23 @@
 // porcentagem = (ímpares / total_elementos) * 100
 // EXIBIR "Total de números ímpares:", ímpares
 // EXIBIR "Porcentagem de números ímpares:", porcentagem, "%"
+
+
+void main() {
+  List<int> vetor = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  int impares = 0;
+
+
+  for (int elemento in vetor) {
+    if (elemento % 2 != 0) {
+      impares++;
+    }
+  }
+
+
+  double totalElementos = 10;
+  double porcentagem = (impares / totalElementos) * 100;
+
+  print("Total de números ímpares: $impares");
+  print("Porcentagem de números ímpares: $porcentagem%");
+}

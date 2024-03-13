@@ -22,3 +22,19 @@
 //     SE matriz[i] % 2 == 0 ENTÃO
 //         pares = pares + 1
 // EXIBIR "Total de números pares:", pares
+
+
+void main() {
+  List<int> matriz = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+  int pares = 0;
+
+  // Contagem de números pares
+  for (int elemento in matriz) {
+    if (elemento % 2 == 0) {
+      pares++;
+    }
+  }
+
+  // Exibição do resultado
+  print("Total de números pares: $pares");
+}

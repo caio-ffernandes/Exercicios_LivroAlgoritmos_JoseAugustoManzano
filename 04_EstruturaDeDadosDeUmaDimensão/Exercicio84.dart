@@ -25,3 +25,21 @@
 //     SENÃO
 //         ADICIONAR vetor[i] À posição i-1 EM vetor_resultante
 // EXIBIR "Vetor resultante:", vetor_resultante
+
+
+void main() {
+  List<int> vetor = [1, 2, 3, 4, 5, 6];
+  List<int> vetorResultante = [];
+
+  
+  for (int i = 0; i < 6; i++) {
+    if (i % 2 == 0) {
+      vetorResultante.add(vetor[i + 1]);
+    } else {
+      vetorResultante.add(vetor[i - 1]);
+    }
+  }
+
+
+  print("Vetor resultante: $vetorResultante");
+}

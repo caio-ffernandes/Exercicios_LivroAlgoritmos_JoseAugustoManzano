@@ -29,3 +29,18 @@
 //         ADICIONAR vetorOriginal[i] À vetorResultante
 // EXIBIR "Vetor original:", vetorOriginal
 // EXIBIR "Vetor resultante:", vetorResultante
+void main() {
+  List<int> vetorOriginal = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+  List<int> vetorResultante = [];
+  
+  for (int i = 0; i < vetorOriginal.length; i++) {
+    if (vetorOriginal[i] % 2 != 0) {
+      vetorResultante.add(vetorOriginal[i] * 2);
+    } else {
+      vetorResultante.add(vetorOriginal[i]);
+    }
+  }
+  
+  print("Vetor original: $vetorOriginal");
+  print("Vetor resultante: $vetorResultante");
+}

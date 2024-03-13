@@ -71,7 +71,7 @@
 //             RETORNAR
 //         FIM SE
 //     FIM PARA
-//     ESCREVER "Aluno não encontrado."
+//     ESCREVER "aluno não encontrado."
 // FIM PROCEDIMENTO
 // 
 // PROCEDIMENTO apresentar_todos_alunos(alunos)
@@ -111,3 +111,72 @@
 //         FIM PARA
 //     FIM PARA
 // FIM PROCEDIMENTO
+
+class Aluno {
+  String nome;
+  List<double> notas;
+  late double media;
+  late String situacao;
+
+  Aluno(this.nome, this.notas) {
+    media = calcularMedia(notas);
+    situacao = determinarSituacao(media);
+  }
+}
+
+void main() {
+  List<Aluno> alunos = [
+    Aluno("João", [7.5, 8.0, 6.5, 9.0]),
+    Aluno("Maria", [6.0, 5.5, 4.0, 6.5]),
+    // Adicione outros alunos aqui 
+  ];
+
+  ordenarPorNome(alunos);
+
+  pesquisarAluno(alunos);
+
+  apresentarTodosAlunos(alunos);
+}
+
+double calcularMedia(List<double> notas) {
+  double soma = notas.reduce((a, b) => a + b);
+  return soma / notas.length;
+}
+
+String determinarSituacao(double media) {
+  return media >= 5 ? "Aprovado" : "Reprovado";
+}
+
+void pesquisarAluno(List<Aluno> alunos) {
+  String nomePesquisa = "Maria"; 
+
+  bool encontrado = false;
+  for (var aluno in alunos) {
+    if (aluno.nome == nomePesquisa) {
+      print("Nome: ${aluno.nome}");
+      print("Notas: ${aluno.notas}");
+      print("Média: ${aluno.media}");
+      print("Situação: ${aluno.situacao}");
+      encontrado = true;
+      break;
+    }
+  }
+
+  if (!encontrado) {
+    print("Aluno não encontrado.");
+  }
+}
+
+void apresentarTodosAlunos(List<Aluno> alunos) {
+  for (var aluno in alunos) {
+    print("Nome: ${aluno.nome}");
+    print("Notas: ${aluno.notas}");
+    print("Média: ${aluno.media}");
+    print("Situação: ${aluno.situacao}");
+    print("");
+  }
+}
+
+void ordenarPorNome(List<Aluno> alunos) {
+  alunos.sort((a, b) => a.nome.compareTo(b.nome));
+}

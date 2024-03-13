@@ -23,3 +23,34 @@
 //         matriz_resultante[i][j] = matriz1[i][j] + matriz2[i][j]
 // EXIBIR "Matriz Resultante:", matriz_resultante
 
+void main() {
+  List<List<int>> matriz1 = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+    [10, 11, 12],
+    [13, 14, 15]
+  ];
+
+  List<List<int>> matriz2 = [
+    [10, 20, 30],
+    [40, 50, 60],
+    [70, 80, 90],
+    [100, 110, 120],
+    [130, 140, 150]
+  ];
+
+  List<List<int>> matrizResultante = List.generate(5, (_) => List.filled(3, 0));
+
+  for (int i = 0; i < 5; i++) {
+    for (int j = 0; j < 3; j++) {
+      matrizResultante[i][j] = matriz1[i][j] + matriz2[i][j];
+    }
+  }
+
+  print("Matriz Resultante:");
+  for (int i = 0; i < 5; i++) {
+    print(matrizResultante[i]);
+  }
+}
+

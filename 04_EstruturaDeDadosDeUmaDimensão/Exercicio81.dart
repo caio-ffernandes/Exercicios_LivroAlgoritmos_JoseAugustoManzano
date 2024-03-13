@@ -38,3 +38,19 @@
 // EXIBIR "Vetor 1:", vetor1
 // EXIBIR "Vetor 2:", vetor2
 // EXIBIR "Vetor 3:", vetor3
+
+
+void main() {
+  List<int> vetor1 = [2, 6, 12, 18, 24, 30, 36, 42, 48, 54];
+  List<int> vetor2 = [1, 3, 7, 9, 11, 13, 17, 19, 23, 27];
+  List<int> vetor3 = [];
+
+  for (int i = 0; i < 10; i++) {
+    vetor3.add(vetor1[i]);
+    vetor3.add(vetor2[i]);
+  }
+
+  print("Vetor 1: $vetor1");
+  print("Vetor 2: $vetor2");
+  print("Vetor 3: $vetor3");
+}
